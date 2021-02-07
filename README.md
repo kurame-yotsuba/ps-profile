@@ -1,0 +1,2 @@
+# ps-profile
+PowerShellのプロファイル
