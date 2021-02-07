@@ -15,6 +15,7 @@ $env:PSModulePath = $MyModulePath + $sep + $env:PSModulePath
 #     "$($remain.ToString("hh\:mm\:ss")) $(Split-Path $PWD -Leaf)>"
 # }
 
+. "$profile_dir\def_pyinit"
 
 # scoopのアップデート
 & "$profile_dir/scoop_update"
