@@ -1,7 +1,8 @@
 
 function pyinit {
     $pipenv = "pipenv.exe"
-    if ((Get-Command $pipenv -ErrorAction SilentlyContinue) -eq $false) {
+    Get-Command $pipenv -ErrorAction SilentlyContinue | Out-Null
+    if ($? -eq $false) {
         Write-Output "$pipenv が見つかりません。"
         return
     }
