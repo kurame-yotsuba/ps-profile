@@ -17,6 +17,12 @@ $env:PSModulePath = $MyModulePath + $sep + $env:PSModulePath
 
 . "$profile_dir\def_pyinit"
 
+$MILIMETER_PER_INCH = 25.4
+$DPI = 96
+function toPx([int] $milimeter) {
+    return $milimeter / $MILIMETER_PER_INCH * $DPI
+}
+
 # scoopのアップデート
 & "$profile_dir/scoop_update"
 
